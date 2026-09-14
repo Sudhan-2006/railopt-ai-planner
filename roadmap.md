@@ -1,0 +1,4 @@
+- [ ] Create RailOpt AI semantic design system and shared shell
+- [ ] Add typed synthetic data and FastAPI-ready service placeholders
+- [ ] Build dashboard, tasks, priority, corridor, optimization, planning, analytics, and settings views
+- [ ] Add route metadata and validate preview/build health

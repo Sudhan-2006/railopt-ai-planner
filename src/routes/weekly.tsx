@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { RailOptApp } from "@/components/RailOptApp";
+export const Route = createFileRoute("/weekly")({ head: () => ({ meta: [{ title: "Weekly Block Plan — RailOpt AI" }, { name: "description", content: "Review a synthetic weekly railway maintenance block plan." }, { property: "og:title", content: "Weekly Block Plan — RailOpt AI" }, { property: "og:description", content: "Review a synthetic weekly railway maintenance block plan." }] }), component: () => <RailOptApp view="weekly" /> });

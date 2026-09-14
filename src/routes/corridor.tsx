@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { RailOptApp } from "@/components/RailOptApp";
+export const Route = createFileRoute("/corridor")({ head: () => ({ meta: [{ title: "Train & Corridor — RailOpt AI" }, { name: "description", content: "Review synthetic timetable movements and available railway maintenance windows." }, { property: "og:title", content: "Train & Corridor — RailOpt AI" }, { property: "og:description", content: "Review synthetic timetable movements and available railway maintenance windows." }] }), component: () => <RailOptApp view="corridor" /> });

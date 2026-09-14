@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { RailOptApp } from "@/components/RailOptApp";
+export const Route = createFileRoute("/priority")({ head: () => ({ meta: [{ title: "AI Priority — RailOpt AI" }, { name: "description", content: "Explore explainable AI maintenance priority scores for synthetic railway tasks." }, { property: "og:title", content: "AI Priority — RailOpt AI" }, { property: "og:description", content: "Explore explainable AI maintenance priority scores for synthetic railway tasks." }] }), component: () => <RailOptApp view="priority" /> });
