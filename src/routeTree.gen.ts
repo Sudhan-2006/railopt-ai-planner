@@ -10,33 +10,141 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AnalyticsRouteImport } from './routes/analytics'
+import { Route as CorridorRouteImport } from './routes/corridor'
+import { Route as MaintenanceRouteImport } from './routes/maintenance'
+import { Route as MonthlyRouteImport } from './routes/monthly'
+import { Route as OptimizationRouteImport } from './routes/optimization'
+import { Route as PriorityRouteImport } from './routes/priority'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as WeeklyRouteImport } from './routes/weekly'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AnalyticsRoute = AnalyticsRouteImport.update({
+  id: '/analytics',
+  path: '/analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CorridorRoute = CorridorRouteImport.update({
+  id: '/corridor',
+  path: '/corridor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MaintenanceRoute = MaintenanceRouteImport.update({
+  id: '/maintenance',
+  path: '/maintenance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MonthlyRoute = MonthlyRouteImport.update({
+  id: '/monthly',
+  path: '/monthly',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OptimizationRoute = OptimizationRouteImport.update({
+  id: '/optimization',
+  path: '/optimization',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PriorityRoute = PriorityRouteImport.update({
+  id: '/priority',
+  path: '/priority',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WeeklyRoute = WeeklyRouteImport.update({
+  id: '/weekly',
+  path: '/weekly',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/analytics': typeof AnalyticsRoute
+  '/corridor': typeof CorridorRoute
+  '/maintenance': typeof MaintenanceRoute
+  '/monthly': typeof MonthlyRoute
+  '/optimization': typeof OptimizationRoute
+  '/priority': typeof PriorityRoute
+  '/settings': typeof SettingsRoute
+  '/weekly': typeof WeeklyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/analytics': typeof AnalyticsRoute
+  '/corridor': typeof CorridorRoute
+  '/maintenance': typeof MaintenanceRoute
+  '/monthly': typeof MonthlyRoute
+  '/optimization': typeof OptimizationRoute
+  '/priority': typeof PriorityRoute
+  '/settings': typeof SettingsRoute
+  '/weekly': typeof WeeklyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/analytics': typeof AnalyticsRoute
+  '/corridor': typeof CorridorRoute
+  '/maintenance': typeof MaintenanceRoute
+  '/monthly': typeof MonthlyRoute
+  '/optimization': typeof OptimizationRoute
+  '/priority': typeof PriorityRoute
+  '/settings': typeof SettingsRoute
+  '/weekly': typeof WeeklyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/analytics'
+    | '/corridor'
+    | '/maintenance'
+    | '/monthly'
+    | '/optimization'
+    | '/priority'
+    | '/settings'
+    | '/weekly'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/analytics'
+    | '/corridor'
+    | '/maintenance'
+    | '/monthly'
+    | '/optimization'
+    | '/priority'
+    | '/settings'
+    | '/weekly'
+  id:
+    | '__root__'
+    | '/'
+    | '/analytics'
+    | '/corridor'
+    | '/maintenance'
+    | '/monthly'
+    | '/optimization'
+    | '/priority'
+    | '/settings'
+    | '/weekly'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AnalyticsRoute: typeof AnalyticsRoute
+  CorridorRoute: typeof CorridorRoute
+  MaintenanceRoute: typeof MaintenanceRoute
+  MonthlyRoute: typeof MonthlyRoute
+  OptimizationRoute: typeof OptimizationRoute
+  PriorityRoute: typeof PriorityRoute
+  SettingsRoute: typeof SettingsRoute
+  WeeklyRoute: typeof WeeklyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +156,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/analytics': {
+      id: '/analytics'
+      path: '/analytics'
+      fullPath: '/analytics'
+      preLoaderRoute: typeof AnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/corridor': {
+      id: '/corridor'
+      path: '/corridor'
+      fullPath: '/corridor'
+      preLoaderRoute: typeof CorridorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/maintenance': {
+      id: '/maintenance'
+      path: '/maintenance'
+      fullPath: '/maintenance'
+      preLoaderRoute: typeof MaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/monthly': {
+      id: '/monthly'
+      path: '/monthly'
+      fullPath: '/monthly'
+      preLoaderRoute: typeof MonthlyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/optimization': {
+      id: '/optimization'
+      path: '/optimization'
+      fullPath: '/optimization'
+      preLoaderRoute: typeof OptimizationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/priority': {
+      id: '/priority'
+      path: '/priority'
+      fullPath: '/priority'
+      preLoaderRoute: typeof PriorityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/weekly': {
+      id: '/weekly'
+      path: '/weekly'
+      fullPath: '/weekly'
+      preLoaderRoute: typeof WeeklyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AnalyticsRoute: AnalyticsRoute,
+  CorridorRoute: CorridorRoute,
+  MaintenanceRoute: MaintenanceRoute,
+  MonthlyRoute: MonthlyRoute,
+  OptimizationRoute: OptimizationRoute,
+  PriorityRoute: PriorityRoute,
+  SettingsRoute: SettingsRoute,
+  WeeklyRoute: WeeklyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
