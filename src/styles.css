@@ -59,6 +59,19 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-signal: var(--signal);
+  --color-signal-foreground: var(--signal-foreground);
+  --color-caution: var(--caution);
+  --color-caution-foreground: var(--caution-foreground);
+  --color-critical: var(--critical);
+  --color-critical-foreground: var(--critical-foreground);
+  --color-clear: var(--clear);
+  --color-clear-foreground: var(--clear-foreground);
+  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
 }
 
 :root {
@@ -95,6 +108,19 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --brand: oklch(0.29 0.09 246);
+  --brand-strong: oklch(0.22 0.07 246);
+  --signal: oklch(0.71 0.19 42);
+  --signal-foreground: oklch(0.99 0.01 80);
+  --caution: oklch(0.76 0.16 78);
+  --caution-foreground: oklch(0.28 0.06 72);
+  --critical: oklch(0.62 0.2 28);
+  --critical-foreground: oklch(0.99 0.01 80);
+  --clear: oklch(0.61 0.13 178);
+  --clear-foreground: oklch(0.98 0.02 178);
+  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
 }
 
 .dark {
@@ -130,6 +156,16 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+  --brand: oklch(0.29 0.09 246);
+  --brand-strong: oklch(0.22 0.07 246);
+  --signal: oklch(0.71 0.19 42);
+  --signal-foreground: oklch(0.99 0.01 80);
+  --caution: oklch(0.76 0.16 78);
+  --caution-foreground: oklch(0.28 0.06 72);
+  --critical: oklch(0.62 0.2 28);
+  --critical-foreground: oklch(0.99 0.01 80);
+  --clear: oklch(0.61 0.13 178);
+  --clear-foreground: oklch(0.98 0.02 178);
 }
 
 @layer base {
@@ -140,5 +176,12 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
   }
+}
+
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+  .font-mono { font-family: var(--font-mono); }
+  .bg-grid { background-image: linear-gradient(to right, color-mix(in oklab, var(--border) 55%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in oklab, var(--border) 55%, transparent) 1px, transparent 1px); background-size: 24px 24px; }
 }
