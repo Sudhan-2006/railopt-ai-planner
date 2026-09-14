@@ -60,6 +60,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
   --color-brand-strong: var(--brand-strong);
   --color-signal: var(--signal);
   --color-signal-foreground: var(--signal-foreground);
@@ -109,6 +110,7 @@
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
   --brand: oklch(0.29 0.09 246);
+  --brand-foreground: oklch(0.98 0.01 90);
   --brand-strong: oklch(0.22 0.07 246);
   --signal: oklch(0.71 0.19 42);
   --signal-foreground: oklch(0.99 0.01 80);
@@ -157,6 +159,7 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
   --brand: oklch(0.29 0.09 246);
+  --brand-foreground: oklch(0.98 0.01 90);
   --brand-strong: oklch(0.22 0.07 246);
   --signal: oklch(0.71 0.19 42);
   --signal-foreground: oklch(0.99 0.01 80);

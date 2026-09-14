@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { RailOptApp } from "@/components/RailOptApp";
+export const Route = createFileRoute("/analytics")({ head: () => ({ meta: [{ title: "Planning Analytics — RailOpt AI" }, { name: "description", content: "Compare simulated existing and AI-optimized railway block planning outcomes." }, { property: "og:title", content: "Planning Analytics — RailOpt AI" }, { property: "og:description", content: "Compare simulated existing and AI-optimized railway block planning outcomes." }] }), component: () => <RailOptApp view="analytics" /> });
